@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Script2</title>
     <script>
         function raiz(num) {
-            alert("A raiz de "+num+" é: "+Math.sqrt(num));
+            alert("A raiz de " + num + " é: " + Math.sqrt(num));
         }
-        function escreveDiv(texto){
-            document.getElementById("minhaDiv"). innerHTML = texto;
+        function escreveDiv(texto) {
+            document.getElementById("minhaDiv").innerHTML = texto;
         }
-        function escreveDiv2(){
+        function escreveDiv2() {
             texto = prompt('Digite um texto qualquer');
-            document.getElementById("minhaDiv2"). innerHTML = texto;
+            document.getElementById("minhaDiv2").innerHTML = texto;
+        }
+        function loopN(n) {
+            n = (Number)(n);
+            html = "";
+            for (let index = 0; index < n; index++) {
+                html += index + 1
+                if (index < n) {
+                    html += "<br>";
+                }
+            }
+            document.getElementById("Desafio").innerHTML = html;
         }
     </script>
 </head>
+
 <body>
     <h1>Raiz Quadrada</h1>
-    <p><button onclick="raiz(25)">Raiz de 25</button><p>
-    <p><button onclick="raiz(36)">Raiz de 36</button><p>
+    <p><button onclick="raiz(25)">Raiz de 25</button>
+    <p>
+    <p><button onclick="raiz(36)">Raiz de 36</button>
+    <p>
     <p><button onclick="raiz(49)">Raiz de 49</button></P>
     <hr>
     <h1>Escreve Div</h1>
     <button onclick="escreveDiv('<h1> Programação Web')">Escrever</button>
-        <p><div id = "minhaDiv"></div></p>
-        <hr>
-        <h1>Escrevendo na Texto Diâmico</h1>
-        <button onclick="escreveDiv2()">Escrever</button> <br><br>
-        <div id="minhaDiv2"></div>
-
-
+    <p>
+    <div id="minhaDiv"></div>
+    </p>
+    <hr>
+    <h1>Escrevendo na Texto Diâmico</h1>
+    <button onclick="escreveDiv2()">Escrever</button> <br><br>
+    <div id="minhaDiv2"></div>
+    <hr>
+    <h1>Desafio</h1>
+    <input id="DesafioInput"></input><br>
+    <button onclick="loopN(document.getElementById('DesafioInput').value)">Carregar</button><br><br>
+    <div id="Desafio"></div>
 </body>
+
 </html>

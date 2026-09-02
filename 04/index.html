@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script 4</title>
+    <script>
+        function raiz(n) {
+            n = (Number)(n)
+            if (n == 0) {
+                document.getElementById("RaizResultado").innerHTML = "Não existe raiz de 0";
+            } else if (n < 0) {
+                document.getElementById("RaizResultado").innerHTML = "Não existe raiz de números negativos";
+            } else {
+                document.getElementById("RaizResultado").innerHTML = Math.sqrt(n);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Desafio: Raiz Quadrada de N</h1>
+    <p>Digite o valor de N: <input id="RaizInput"> <button
+            onclick="raiz(document.getElementById('RaizInput').value)">Calcular</button></p>
+    <div id="RaizResultado"></div>
+</body>
+
+</html>
