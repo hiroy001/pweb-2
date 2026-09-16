@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays 2</title>
+    <script>
+        let pilha = Array()
+
+        function adicionar() {
+            var nome = prompt("Qual o nome da pessoa?")
+            if (nome == null || nome == "") {
+                alert("Nome inválido para a pessoa")
+                return
+            }
+            pilha.push(nome)
+            mostrar()
+        }
+
+        function remover() {
+            if (pilha.length == 0) {
+                alert("A pilha está vazia")
+                return
+            } else {
+                let elemento = pilha.pop()
+                alert("Removido: " + elemento)
+                mostrar()
+            }
+        }
+
+        function mostrar() {
+            const container = document.getElementById("pilhaPessoas")
+            container.innerHTML = ''
+
+            for (var i = 0; i < pilha.length; i++) {
+                var tag = "<b>" + (i + 1) + ": " + pilha[i] + "<b><br><br>"
+                container.innerHTML += tag
+            }
+        }
+
+        function posição() {
+            var indice = prompt("Em qual posição você deseja consultar?")
+            indice = Number(indice) - 1
+
+            if (indice < 0 || indice > pilha.length) {
+                alert("Indice inválido para consultar")
+                return
+            }
+
+            alert("Na posição " + (indice + 1) + " está: " + pilha[indice])
+        }
+
+        function limpar() {
+            if (pilha.length == 0) {
+                alert("A Pilha está vazia")
+                return
+            }
+            pilha = Array()
+            mostrar()
+        }
+
+        function inverter() {
+            if (pilha.length == 0) {
+                alert("A Pilha está vazia")
+                return
+            }
+            pilha.reverse()
+            mostrar()
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Lista de Pessoas</h1>
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="remover()">Remover</button>
+    <button onclick="posição()">Posição</button>
+    <button onclick="limpar()">Limpar</button>
+    <button onclick="inverter()">Inverter</button>
+    <br><br>
+    <div id="pilhaPessoas"></div>
+    <hr>
+</body>
+
+</html>
