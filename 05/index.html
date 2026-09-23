@@ -34,7 +34,7 @@
 
             for (let i = 0; i < pilhaPessoas.length;  i++) {
                const pessoa = pilhaPessoas[i];
-               const tag = '- Nome: ' + pessoa.nome + ' | Contato: ' + pessoa.contato + '</h5>';
+               const tag = '- Nome: ' + pessoa.nome + ' | Contato: ' + pessoa.contato + '  </h5>';
                 container.innerHTML += tag;
             }
         }
@@ -76,5 +76,13 @@
     <input type="text" id="contato" placeholder="Digite o contato">
 
     <button onclick="adicionar()">Adicionar</button>
+    <button onclick="posicao()">Consultar posição</button>
+    <button onclick="remover()">Remover (pop)</button>
+
+    <br><br>
+    <hr>
+
+    <div id="minhaDiv"></div>
+
 </body>
 </html> 
