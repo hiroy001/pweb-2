@@ -1,0 +1,105 @@
+:root {
+    --accent: rgba(228, 253, 255, .3);
+    --accent-2: rgba(255, 255, 255, 0.1);
+    --accent-3: rgba(198, 226, 230, 0.8);
+    --accent-4: rgb(55, 75, 100);
+
+    --selected: rgba(255, 255, 255, .5);
+    --selected-2: rgba(0, 0, 0, .7);
+}
+
+/* Global */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Jetbrains Mono';
+}
+
+/* Background */
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    image-rendering: pixelated;
+    object-fit: fill;
+}
+
+/* Container */
+.container {
+    width: 30%;
+    height: fit-content;
+
+    padding: 25px;
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--accent);
+    border: 1px solid var(--accent-2);
+    border-radius: 25px;
+    box-shadow: 0 0 10px var(--accent-3);
+    backdrop-filter: blur(25px);
+}
+
+.container h3 {
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.container li {
+    margin-left: 15px;
+
+    font-weight: 300;
+}
+
+.container hr {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: -26px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    color: rgba(0, 0, 50, 0.3);
+}
+
+/* Cntainer.Division */
+.container .division {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .division a {
+    height: 25px;
+
+    margin-top: 5px;
+    padding: 5px;
+
+    background-color: rgba(187, 224, 228, 0.5);
+    border: 1px solid rgba(87, 104, 106, 0.3);
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: var(--accent-4);
+    font-weight: 450;
+
+    transition: ease 0.1s;
+}
+
+.container .division a:hover {
+    background-color: var(--selected);
+    color: var(--selected-2);
+}
