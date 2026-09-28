@@ -1,11 +1,13 @@
 :root {
-    --accent: rgba(228, 253, 255, .3);
+    --accent: rgba(202, 251, 255, 0.3);
     --accent-2: rgba(255, 255, 255, 0.1);
     --accent-3: rgba(198, 226, 230, 0.5);
     --accent-4: rgb(55, 75, 100);
 
-    --selected: rgba(255, 255, 255, .5);
-    --selected-2: rgba(0, 0, 0, .7);
+    --selected: rgba(199, 253, 255, 0.6);
+    --selected-2: rgb(255, 255, 255);
+
+    --title: rgb(204, 235, 242);
 }
 
 /* Global */
@@ -57,12 +59,15 @@ body {
     margin-bottom: 25px;
 
     text-align: center;
+    color: var(--title);
 }
 
 .container li {
     margin-left: 15px;
+    margin-top: 3px;
 
     font-weight: 300;
+    color: var(--title);
 }
 
 .container hr {
