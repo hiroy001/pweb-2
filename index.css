@@ -1,7 +1,7 @@
 :root {
     --accent: rgba(228, 253, 255, .3);
     --accent-2: rgba(255, 255, 255, 0.1);
-    --accent-3: rgba(198, 226, 230, 0.8);
+    --accent-3: rgba(198, 226, 230, 0.5);
     --accent-4: rgb(55, 75, 100);
 
     --selected: rgba(255, 255, 255, .5);
@@ -21,7 +21,8 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', 'Monocraft';
+    font-size: small;
 }
 
 /* Background */
@@ -87,6 +88,10 @@ body {
 
     margin-top: 5px;
     padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background-color: rgba(187, 224, 228, 0.5);
     border: 1px solid rgba(87, 104, 106, 0.3);
